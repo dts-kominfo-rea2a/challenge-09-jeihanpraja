@@ -4,14 +4,14 @@ import React from "react";
 import "./Contact.css";
 // import contacts from "./data/contacts.json";
 
-const Contact = (props) => {
+const Contact = ({ data }) => {
   return (
-    <div className="Contact">
-      <img className="profPic" src={props.photo} alt="profile"></img>
+    <div className="container">
+      <img className="profPic" src={data.photo} alt={data.name}></img>
       <section className="detailContact">
-        <h3>{props.name}</h3>
-        <p>{props.phone}</p>
-        <p>{props.email}</p>
+        <h3>{data.name}</h3>
+        <p>{data.phone}</p>
+        <p>{data.email}</p>
       </section>
     </div>
   );
